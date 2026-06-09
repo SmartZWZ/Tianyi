@@ -50,7 +50,7 @@ a {
 .bg-media {
   position: absolute;
   inset: -12%;
-  background-image: url("/assets/images/hero.jpg");
+  background-image: url("assets/images/hero.jpg");
   background-size: cover;
   background-position: center;
   filter: saturate(0.85) contrast(1.06) brightness(0.65);
@@ -489,4 +489,3 @@ html[data-theme="light"] .viewer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
