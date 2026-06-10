@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>洛天依 · 展示站</title>
     <meta name="description" content="洛天依展示站（静态）。" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9D%84%3C/text%3E%3C/svg%3E" />
@@ -19,14 +19,38 @@
     <header class="topbar">
       <div class="topbar-inner">
         <a class="brand" href="#top" aria-label="回到顶部">
-          <span class="brand-mark" aria-hidden="true">♪</span>
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="featherG" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#a7fff0" />
+                  <stop offset="1" stop-color="#98b4ff" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M20.7 3.3c-3.4-2-9.1.5-12.7 4.1C4.5 11 2.7 16.7 4.7 20.1c.2.3.6.4.9.2 2.1-1.3 4.2-3.1 6.1-5.3-.9.1-1.9.1-2.9 0a.9.9 0 0 1-.6-1.5l.1-.1c1.8-1.8 4.2-3.4 6.9-4.6-.8.7-1.6 1.5-2.3 2.3.8 0 1.6-.1 2.4-.3 2.2-2 4-4.1 5.3-6.1.2-.3.1-.7-.2-.9Z"
+                fill="url(#featherG)"
+              />
+              <path
+                d="M6.2 18.3c1.1-2 3.1-4.6 6.1-7.2 3.2-2.8 6.5-4.3 8.7-4.8"
+                fill="none"
+                stroke="rgba(255,255,255,.75)"
+                stroke-width="1.1"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16.9 13.4l1-.5.5-1 .5 1 1 .5-1 .5-.5 1-.5-1-1-.5Z"
+                fill="rgba(255,255,255,.9)"
+              />
+            </svg>
+          </span>
           <span class="brand-text">洛天依</span>
         </a>
 
         <nav class="nav">
           <a href="#about">介绍</a>
           <a href="#gallery">画廊</a>
-          <a href="#music">音乐</a>
+          <a href="#music">代表作</a>
         </nav>
 
         <div class="actions">
@@ -41,7 +65,7 @@
         <div class="hero-card">
           <p class="kicker">Luo Tianyi</p>
           <h1 class="title">洛天依</h1>
-          <p class="subtitle">把歌声送到云端</p>
+          <p class="subtitle">华风夏韵，洛水天依</p>
 
           <div class="hero-meta">
             <div class="pill">天依蓝</div>
@@ -49,7 +73,7 @@
           </div>
 
           <div class="hero-quote" role="note">
-            <p>“和你一起唱到未来。”</p>
+            <p>“从数字星河中诞生的 洛天依 ，用音符编织着跨越次元的梦幻篇章！”</p>
           </div>
 
           <div class="hero-cta">
@@ -158,16 +182,51 @@
 
       <section id="music" class="section">
         <div class="section-head">
-          <h2>音乐</h2>
+          <h2>代表作</h2>
         </div>
 
         <div class="music">
           <div class="music-left">
-            <div class="music-title">播放器</div>
-            <div id="trackLabel" class="music-subtitle">bgm.mp3</div>
+            <div id="trackTitle" class="music-title">普通Disco</div>
+            <div id="trackLabel" class="music-subtitle">普通Disco-洛天依/言和</div>
           </div>
-          <div class="tracks" id="tracks" aria-label="歌曲列表">
-            <button class="track is-active" type="button" data-src="assets/audio/bgm.mp3" data-title="bgm.mp3">bgm.mp3</button>
+          <div class="tracks" id="tracks" aria-label="代表作列表">
+            <button
+              class="track is-active"
+              type="button"
+              data-src="assets/audio/bgm.mp3"
+              data-title="普通Disco"
+              data-subtitle="普通Disco-洛天依/言和"
+            >
+              普通Disco
+            </button>
+            <button
+              class="track"
+              type="button"
+              data-src="assets/audio/ilem _ 洛天依 _ 言和 - 达拉崩吧_L.mp3"
+              data-title="达拉崩吧"
+              data-subtitle="达拉崩吧-ilem/洛天依/言和"
+            >
+              达拉崩吧
+            </button>
+            <button
+              class="track"
+              type="button"
+              data-src="assets/audio/洛天依 - 权御天下_L.mp3"
+              data-title="权御天下"
+              data-subtitle="权御天下-洛天依"
+            >
+              权御天下
+            </button>
+            <button
+              class="track"
+              type="button"
+              data-src="assets/audio/洛天依 _ ilem - 勾指起誓_L.mp3"
+              data-title="勾指起誓"
+              data-subtitle="勾指起誓-洛天依/ilem"
+            >
+              勾指起誓
+            </button>
           </div>
           <audio id="bgm" preload="auto" autoplay loop src="assets/audio/bgm.mp3"></audio>
         </div>

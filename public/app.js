@@ -27,7 +27,8 @@ const attachTheme = () => {
 const attachAudio = () => {
   const audio = qs("#bgm")
   const btn = qs("#musicBtn")
-  const label = qs("#trackLabel")
+  const titleEl = qs("#trackTitle")
+  const labelEl = qs("#trackLabel")
   const tracks = qs("#tracks")
   if (!audio || !btn) return
 
@@ -45,10 +46,13 @@ const attachAudio = () => {
     if (!trackBtn) return
     const src = trackBtn.getAttribute("data-src")
     if (!src) return
+
     const title = trackBtn.getAttribute("data-title") || trackBtn.textContent || ""
+    const subtitle = trackBtn.getAttribute("data-subtitle") || ""
 
     setActive(trackBtn)
-    if (label) label.textContent = title.trim() || src
+    if (titleEl) titleEl.textContent = title.trim()
+    if (labelEl) labelEl.textContent = subtitle.trim() || title.trim()
 
     if (audio.getAttribute("src") !== src) audio.setAttribute("src", src)
     audio.load()

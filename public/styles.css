@@ -80,6 +80,7 @@ a {
   backdrop-filter: blur(12px);
   background: rgba(0, 0, 0, 0.22);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: env(safe-area-inset-top);
 }
 
 html[data-theme="light"] .topbar {
@@ -110,8 +111,22 @@ html[data-theme="light"] .topbar {
   display: grid;
   place-items: center;
   border: 1px solid var(--stroke);
-  border-radius: 12px;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-mark svg {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 .nav {
@@ -171,7 +186,7 @@ html[data-theme="light"] .btn-ghost {
 .page {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 22px 18px 56px;
+  padding: 22px calc(18px + env(safe-area-inset-right)) 56px calc(18px + env(safe-area-inset-left));
 }
 
 .hero {
@@ -198,7 +213,7 @@ html[data-theme="light"] .btn-ghost {
 
 .title {
   margin: 0;
-  font-size: 42px;
+  font-size: clamp(30px, 8vw, 42px);
   letter-spacing: 0.02em;
 }
 
@@ -446,6 +461,68 @@ html[data-theme="light"] .track {
 
 .music audio {
   display: none;
+}
+
+@media (max-width: 520px) {
+  .topbar-inner {
+    flex-wrap: wrap;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  .page {
+    padding-top: 16px;
+    padding-bottom: 46px;
+  }
+
+  .hero-card {
+    padding: 14px;
+  }
+
+  .hero-quote {
+    padding: 10px 12px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .music {
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .music-left {
+    width: 100%;
+  }
+
+  .tracks {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .track {
+    width: 100%;
+    min-height: 44px;
+  }
 }
 
 .footer {
