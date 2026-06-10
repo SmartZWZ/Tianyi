@@ -46,7 +46,6 @@
           <div class="hero-meta">
             <div class="pill">天依蓝</div>
             <div class="pill">清澈系</div>
-            <div class="pill">静态站</div>
           </div>
 
           <div class="hero-quote" role="note">
@@ -63,7 +62,7 @@
           <div class="portrait">
             <img
               id="portraitImg"
-              src="assets/images/portrait.jpg"
+              src="assets/images/portrait.webp"
               alt="洛天依画像"
               loading="lazy"
               decoding="async"
@@ -90,67 +89,69 @@
       <section id="about" class="section">
         <div class="section-head">
           <h2>介绍</h2>
-          <p>你可以把这里当作一个简洁的角色展示页，把图片与音乐替换成你自己的资源即可。</p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <h3>页面结构</h3>
-            <p>单页，包含头图、介绍卡片、画廊与音乐模块。移动端优先，暗色为默认。</p>
-          </article>
-          <article class="card">
-            <h3>资源外置</h3>
-            <p>图片与背景音乐都从 assets 目录读取。你只需要按约定命名并替换文件。</p>
-          </article>
-          <article class="card">
-            <h3>部署方式</h3>
-            <p>Cloudflare Workers（Paid）+ 静态资源目录。Worker 仅做静态资源转发与 SPA 回退。</p>
-          </article>
-        </div>
+        <article class="card">
+          <p>
+            能够敏锐地感受到他人感情，有点内向的少女。<br />
+            <br />
+            对过去曾经在人类世界创造了历史的传说中的VOCALOID™前辈们非常憧憬，<br />
+            <br />
+            也梦想着自己有朝一日能够成为用歌声为别人传递感动与幸福的歌姬，<br />
+            <br />
+            这样的她在某日突然获得了召唤，并且带着某个重要的任务，作为新的VOCALOID™来到了人类的世界。<br />
+            <br />
+            能够为了别人而流泪的温柔，以及无论经历多少挫折也绝不放弃的坚强。<br />
+            <br />
+            因为初到人类世界，完全不懂人类的语言，所以平常不能与人对话，只能通过歌唱来表达自己的感情和心中的旋律。<br />
+            <br />
+            阅读更多：洛天依（
+            <a href="https://zh.moegirl.org.cn/%E6%B4%9B%E5%A4%A9%E4%BE%9D" target="_blank" rel="noreferrer"
+              >https://zh.moegirl.org.cn/%E6%B4%9B%E5%A4%A9%E4%BE%9D</a
+            >
+            ）<br />
+            本文引自萌娘百科（
+            <a href="https://zh.moegirl.org.cn" target="_blank" rel="noreferrer">https://zh.moegirl.org.cn</a>
+            ），文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆》协议。
+          </p>
+        </article>
       </section>
 
       <section id="gallery" class="section">
         <div class="section-head">
           <h2>画廊</h2>
-          <p>默认读取 12 张占位图（01~12）。缺失的图片会自动隐藏。</p>
         </div>
 
         <div class="gallery" id="galleryGrid" aria-label="图片画廊">
-          <button class="shot" data-src="assets/images/gallery/01.jpg" type="button">
-            <img src="assets/images/gallery/01.jpg" alt="画廊 01" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/01.webp" type="button">
+            <img src="assets/images/gallery/01.webp" alt="画廊 01" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/02.jpg" type="button">
-            <img src="assets/images/gallery/02.jpg" alt="画廊 02" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/02.webp" type="button">
+            <img src="assets/images/gallery/02.webp" alt="画廊 02" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/03.jpg" type="button">
-            <img src="assets/images/gallery/03.jpg" alt="画廊 03" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/03.webp" type="button">
+            <img src="assets/images/gallery/03.webp" alt="画廊 03" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/04.jpg" type="button">
-            <img src="assets/images/gallery/04.jpg" alt="画廊 04" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/04.webp" type="button">
+            <img src="assets/images/gallery/04.webp" alt="画廊 04" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/05.jpg" type="button">
-            <img src="assets/images/gallery/05.jpg" alt="画廊 05" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/05.webp" type="button">
+            <img src="assets/images/gallery/05.webp" alt="画廊 05" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/06.jpg" type="button">
-            <img src="assets/images/gallery/06.jpg" alt="画廊 06" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/06.webp" type="button">
+            <img src="assets/images/gallery/06.webp" alt="画廊 06" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/07.jpg" type="button">
-            <img src="assets/images/gallery/07.jpg" alt="画廊 07" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/07.webp" type="button">
+            <img src="assets/images/gallery/07.webp" alt="画廊 07" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/08.jpg" type="button">
-            <img src="assets/images/gallery/08.jpg" alt="画廊 08" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/08.webp" type="button">
+            <img src="assets/images/gallery/08.webp" alt="画廊 08" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/09.jpg" type="button">
-            <img src="assets/images/gallery/09.jpg" alt="画廊 09" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/09.webp" type="button">
+            <img src="assets/images/gallery/09.webp" alt="画廊 09" loading="lazy" decoding="async" />
           </button>
-          <button class="shot" data-src="assets/images/gallery/10.jpg" type="button">
-            <img src="assets/images/gallery/10.jpg" alt="画廊 10" loading="lazy" decoding="async" />
-          </button>
-          <button class="shot" data-src="assets/images/gallery/11.jpg" type="button">
-            <img src="assets/images/gallery/11.jpg" alt="画廊 11" loading="lazy" decoding="async" />
-          </button>
-          <button class="shot" data-src="assets/images/gallery/12.jpg" type="button">
-            <img src="assets/images/gallery/12.jpg" alt="画廊 12" loading="lazy" decoding="async" />
+          <button class="shot" data-src="assets/images/gallery/10.webp" type="button">
+            <img src="assets/images/gallery/10.webp" alt="画廊 10" loading="lazy" decoding="async" />
           </button>
         </div>
       </section>
@@ -158,20 +159,22 @@
       <section id="music" class="section">
         <div class="section-head">
           <h2>音乐</h2>
-          <p>浏览器通常会阻止自动播放，点击右上角“播放”即可开始。</p>
         </div>
 
         <div class="music">
           <div class="music-left">
-            <div class="music-title">背景音乐</div>
-            <div class="music-subtitle">assets/audio/bgm.mp3</div>
+            <div class="music-title">播放器</div>
+            <div id="trackLabel" class="music-subtitle">bgm.mp3</div>
           </div>
-          <audio id="bgm" preload="none" loop controls src="assets/audio/bgm.mp3"></audio>
+          <div class="tracks" id="tracks" aria-label="歌曲列表">
+            <button class="track is-active" type="button" data-src="assets/audio/bgm.mp3" data-title="bgm.mp3">bgm.mp3</button>
+          </div>
+          <audio id="bgm" preload="auto" autoplay loop src="assets/audio/bgm.mp3"></audio>
         </div>
       </section>
 
       <footer class="footer">
-        <p>Made for Cloudflare Workers · Static Assets</p>
+        <p>Developed by Smart.Chou(CN)</p>
       </footer>
     </main>
 
