@@ -93,10 +93,11 @@ const attachAudio = () => {
   audio.addEventListener("play", setBtn)
   audio.addEventListener("pause", setBtn)
 
-  tryAutoPlay()
   document.addEventListener(
     "pointerdown",
-    () => {
+    (e) => {
+      const target = e.target instanceof Element ? e.target : null
+      if (target?.closest("#musicBtn, #tracks")) return
       if (!audio.paused) return
       tryAutoPlay()
     },
